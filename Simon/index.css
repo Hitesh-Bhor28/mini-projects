@@ -1,0 +1,114 @@
+/* ===== GENERAL PAGE STYLING ===== */
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(50, 50, 50, 0.8)),
+    url("https://images.unsplash.com/photo-1523275335684-37898b6baf30")
+      center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* ===== HEADINGS ===== */
+h1 {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+  margin-bottom: 10px;
+}
+h2 {
+  font-weight: normal;
+  font-size: clamp(1rem, 3.5vw, 1.5rem);
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+/* ===== BUTTON CONTAINER ===== */
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Row layout */
+.line-one,
+.line-two {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  height: clamp(100px, 25vw, 150px);
+  width: clamp(100px, 25vw, 150px);
+  border-radius: 15%;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  font-size: clamp(1.2rem, 5vw, 2rem);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  touch-action: manipulation; /* Prevent double-tap zoom on mobile */
+}
+
+.btn:hover,
+.btn:active {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.5);
+}
+
+/* ===== TILE COLORS ===== */
+.red {
+  background: linear-gradient(145deg, #ff4d6d, #d93c5f);
+}
+.yellow {
+  background: linear-gradient(145deg, #ffd166, #fca311);
+}
+.green {
+  background: linear-gradient(145deg, #06d6a0, #118ab2);
+}
+.purple {
+  background: linear-gradient(145deg, #9d4edd, #6a4c93);
+}
+
+/* ===== FLASH EFFECTS ===== */
+.flash {
+  background: white !important;
+  box-shadow: 0 0 30px white;
+}
+
+.userflash {
+  background: limegreen !important;
+  box-shadow: 0 0 30px limegreen;
+}
+
+/* ===== RESPONSIVE LAYOUT ===== */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+    justify-content: center;
+  }
+
+  .btn-container {
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .line-one,
+  .line-two {
+    gap: 10px;
+  }
+}
